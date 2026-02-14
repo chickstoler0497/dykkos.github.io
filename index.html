@@ -1,27 +1,72 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Bowen's Website</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bowen</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <header class="header">
+    <div class="container">
+      <h1 class="name">Bowen</h1>
+      <p class="tagline">Math & Computer Science · UofT</p>
+    </div>
+  </header>
 
-  <h1>Bowen</h1>
+  <!-- Clickable blocks -->
+  <main class="container">
+    <section class="grid">
+      <a class="card" href="#about">
+        <h2>About Me</h2>
+        <p>Quick bio, interests, and links.</p>
+      </a>
 
-  <p>Welcome to my personal website.</p>
+      <a class="card" href="#blog">
+        <h2>Blog</h2>
+        <p>Posts and updates.</p>
+      </a>
 
-  <h2>About Me</h2>
-  <p>I study mathematics and computer science.</p>
+      <a class="card" href="#math">
+        <h2>Mathematics</h2>
+        <p>Notes, problem-solving, combinatorics.</p>
+      </a>
 
-  <h2>Blog</h2>
-  <p>Coming soon.</p>
+      <a class="card" href="#cs">
+        <h2>Computer Science</h2>
+        <p>Projects, code, writeups.</p>
+      </a>
+    </section>
 
-  <h2>Math</h2>
-  <p>Notes and problem solving.</p>
+    <!-- The sections you jump to -->
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>I study mathematics and computer science. (Write more here.)</p>
+    </section>
 
-  <h2>Computer Science</h2>
-  <p>Projects and code.</p>
+    <section id="blog" class="section">
+      <h2>Blog</h2>
+      <p>Coming soon.</p>
+    </section>
 
+    <section id="math" class="section">
+      <h2>Mathematics</h2>
+      <p>Graph theory, Ramsey theory, random graphs, etc.</p>
+    </section>
+
+    <section id="cs" class="section">
+      <h2>Computer Science</h2>
+      <p>Projects and code.</p>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Bowen</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
